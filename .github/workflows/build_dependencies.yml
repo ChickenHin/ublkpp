@@ -218,9 +218,9 @@ jobs:
         gcovr --cobertura ./coverage.xml
       if: ${{ inputs.testing == 'True' && inputs.tooling == 'Coverage' }}
 
-    - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v5
-      with:
-        files: ./coverage.xml
-        disable_search: true
-      if: ${{ inputs.tooling == 'Coverage' }}
+    # - name: Upload coverage reports to Codecov
+    #   uses: codecov/codecov-action@v5
+    #   with:
+    #     files: ./coverage.xml
+    #     disable_search: true
+    #   if: ${{ inputs.tooling == 'Coverage' }}
